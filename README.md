@@ -1,4 +1,5 @@
-# Diabetes prediction
+# Predicting Diabetes using a Neural Network Model Trained on Clinical Data
+## An Evaluation of Accuracy, Precision, Recall, and F1 Score
 
 > By Salar Mokhtari Laleh
 
