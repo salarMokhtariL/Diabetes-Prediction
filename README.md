@@ -1,5 +1,8 @@
 # Diabetes prediction
 
+> By Salar Mokhtari Laleh
+
+
 
 Diabetes prediction is the process of using various data points and algorithms to assess the likelihood of an individual developing diabetes. Diabetes is a chronic disease that affects millions of people worldwide, and early detection can be crucial in preventing complications such as heart disease, kidney failure, and nerve damage.
 
