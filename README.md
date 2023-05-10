@@ -2,6 +2,7 @@
 
 > By Salar Mokhtari Laleh
 
+![Pink and Peach Technology LinkedIn Banner (2)](https://github.com/salarMokhtariL/Diabetes-prediction/assets/75142232/6f8f0b5a-41b8-4518-b8df-eec991df8fce)
 
 
 Diabetes prediction is the process of using various data points and algorithms to assess the likelihood of an individual developing diabetes. Diabetes is a chronic disease that affects millions of people worldwide, and early detection can be crucial in preventing complications such as heart disease, kidney failure, and nerve damage.
