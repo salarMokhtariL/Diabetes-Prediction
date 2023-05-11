@@ -40,3 +40,16 @@ jupyter notebook diabetes_prediction.ipynb
 ```
 Follow the instructions in the notebook to execute the code.
 
+## Neural Network Model
+The neural network model used in this code has the following architecture:
+
+```
+Net(
+  (fc1): Linear(in_features=8, out_features=32, bias=True)
+  (fc2): Linear(in_features=32, out_features=16, bias=True)
+  (fc3): Linear(in_features=16, out_features=1, bias=True)
+  (dropout): Dropout(p=0.2, inplace=False)
+  (bn1): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+  (bn2): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
+)
+```
