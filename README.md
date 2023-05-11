@@ -72,9 +72,13 @@ The neural network model is trained for 1000 epochs with a batch size of 1. Duri
 
 ## Evaluation
 The trained neural network model is evaluated on a held-out test set using several evaluation metrics, including accuracy, precision, recall, and F1 score. The evaluation metrics are computed as follows:
+
 $Accuracy = \frac{TP+TN}{TP+TN+FP+FN} $
+
 $Precision = \frac{TP}{TP+FP} $
+
 $Recall = \frac{TP}{TP+TN} $
+
 $F1 Score = 2.{\frac{Precision⋅Recall}{Precision⋅Recall}} $
 
 where $TP$ is the number of true positives, $TN$ is the number of true negatives, $FP$ is the number of false positives, and $FN$ is the number of false negatives.
