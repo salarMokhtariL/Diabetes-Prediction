@@ -1,7 +1,7 @@
 # Predicting Diabetes using a Neural Network Model Trained on Clinical Data
 ## An Evaluation of Accuracy, Precision, Recall, and F1 Score
 
-> By Salar Mokhtari Laleh
+> $By$ $Salar$ $Mokhtari$ $Laleh$ 
 
 ![Pink and Peach Technology LinkedIn Banner (2)](https://github.com/salarMokhtariL/Diabetes-prediction/assets/75142232/6f8f0b5a-41b8-4518-b8df-eec991df8fce)
 
