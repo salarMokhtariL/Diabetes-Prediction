@@ -66,6 +66,20 @@ The neural network model is trained on the diabetes dataset using the Adam optim
 
 $BinaryCrossEntropyLoss (y,\hat{y})= - \frac{1}{N} \displaystyle\sum_{i=1}^{N} [y_i \log(\hat{y_i})+(1-y_i) \log(1-\hat{y_i}]$
 
+where $y$ is the ground truth label vector, $\hat{y}$ is the predicted label vector, and $N$ is the number of samples.
+
+The neural network model is trained for 1000 epochs with a batch size of 1. During each epoch, the optimizer computes the gradients of the loss function with respect to the model parameters and updates the parameters accordingly. The training loss is monitored every 100 epochs to ensure that the model is converging.
+
+## Evaluation
+The trained neural network model is evaluated on a held-out test set using several evaluation metrics, including accuracy, precision, recall, and F1 score. The evaluation metrics are computed as follows:
+$Accuracy = \frac{TP+TN}{TP+TN+FP+FN} $
+$Precision = \frac{TP}{TP+FP} $
+$Recall = \frac{TP}{TP+TN} $
+$F1 Score = 2.{\frac{Precision⋅Recall}{Precision⋅Recall}} $
+
+where $TP$ is the number of true positives, $TN$ is the number of true negatives, $FP$ is the number of false positives, and $FN$ is the number of false negatives.
+
+The evaluation metrics provide a quantitative measure of the performance of the neural network model. A higher accuracy, precision, recall, and F1 score indicate better performance.
 # Results
 The trained model achieved an accuracy of 0.7792, a precision of 0.6818, a recall of 0.6571, and an F1 score of 0.6693 on the testing set. These results indicate that the model has a moderate predictive performance for diabetes in individuals.
 
