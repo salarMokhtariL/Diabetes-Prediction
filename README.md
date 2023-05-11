@@ -56,11 +56,15 @@ The neural network model is defined using the following formula:
 
 $y= \sigma(W_3.ReLU(BN_2(W_2.ReLU(BN_1(W_1.x))))$
 
+where $x$ is the input feature vector, $W_1$, $W_2$, and $W_3$ are the weight matrices of the three fully connected layers, $BN_1$ and $BN_2$ are the batch normalization layers, and $\sigma$ is the sigmoid activation function.
+
 ## Loss Function and Optimization
 We used the binary cross-entropy loss function, also known as the log loss, to calculate the error between the predicted and actual values. The Adam optimizer was used to minimize this loss function and update the model parameters during training.
 
-## Training and Evaluation
-We trained the neural network model for 1000 epochs on the training set using mini-batch gradient descent. We printed the loss every 100 epochs to monitor the training progress. After training the model, we evaluated its performance on the testing set using four different evaluation metrics: accuracy, precision, recall, and F1 score. These metrics were calculated using scikit-learn's `accuracy_score()`, `precision_score()`, `recall_score()`, and `f1_score()` functions, respectively.
+## Training
+The neural network model is trained on the diabetes dataset using the Adam optimizer with a learning rate of 0.001. The training process involves updating the weights of the neural network by minimizing the binary cross-entropy loss between the predicted labels and the ground truth labels. The binary cross-entropy loss is defined as follows:
+
+$BinaryCrossEntropyLoss (y,\hat{y})= - \frac{1}{N} \displaystyle\sum_{i=1}^{N} [y_i \log(\hat{y_i})+(1-y_i) \log(1-\hat{y_i}]$
 
 # Results
 The trained model achieved an accuracy of 0.7792, a precision of 0.6818, a recall of 0.6571, and an F1 score of 0.6693 on the testing set. These results indicate that the model has a moderate predictive performance for diabetes in individuals.
