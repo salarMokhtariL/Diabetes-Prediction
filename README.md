@@ -5,8 +5,10 @@
 
 ![Pink and Peach Technology LinkedIn Banner (2)](https://github.com/salarMokhtariL/Diabetes-prediction/assets/75142232/6f8f0b5a-41b8-4518-b8df-eec991df8fce)
 
-This code uses a neural network model trained on clinical data to predict diabetes. The model is evaluated using accuracy, precision, recall, and F1 score.
-## Dependencies
+# Introduction
+This project aims to predict diabetes in individuals using a neural network model. The dataset used for training and testing the model is publicly available and contains information about eight medical predictors (e.g., glucose level, age, and blood pressure) and one target variable indicating whether or not the individual has diabetes.
+
+# Dependencies
 
 This code requires the following dependencies:
 
@@ -22,7 +24,7 @@ You can install them using pip:
 pip install torch numpy pandas scikit-learn
 ```
 
-## Usage
+# Usage
 Clone the repository:
 
 ```
@@ -40,16 +42,22 @@ jupyter notebook diabetes_prediction.ipynb
 ```
 Follow the instructions in the notebook to execute the code.
 
-## Neural Network Model
-The neural network model used in this code has the following architecture:
 
-```
-Net(
-  (fc1): Linear(in_features=8, out_features=32, bias=True)
-  (fc2): Linear(in_features=32, out_features=16, bias=True)
-  (fc3): Linear(in_features=16, out_features=1, bias=True)
-  (dropout): Dropout(p=0.2, inplace=False)
-  (bn1): BatchNorm1d(32, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-  (bn2): BatchNorm1d(16, eps=1e-05, momentum=0.1, affine=True, track_running_stats=True)
-)
-```
+# Methods
+## Data Preprocessing
+The first step in building the model was to load the dataset and preprocess it for training and testing. The dataset was loaded from a remote source and stored in a pandas DataFrame. The input features (predictors) and target variable were then separated into different numpy arrays. To split the dataset into training and testing sets, we used the `train_test_split()` function from scikit-learn, which randomly divides the data into two sets with a specified test size and random state. Finally, the numpy arrays were converted to PyTorch tensors, which are required for training the neural network.
+
+## Neural Network Model
+We used a fully connected neural network architecture with three hidden layers to predict diabetes in individuals. The first hidden layer consisted of 32 neurons, the second hidden layer consisted of 16 neurons, and the final output layer had one neuron with a sigmoid activation function. Additionally, we added two batch normalization layers and two dropout layers with a dropout rate of 0.2 to prevent overfitting of the model.
+
+## Loss Function and Optimization
+We used the binary cross-entropy loss function, also known as the log loss, to calculate the error between the predicted and actual values. The Adam optimizer was used to minimize this loss function and update the model parameters during training.
+
+## Training and Evaluation
+We trained the neural network model for 1000 epochs on the training set using mini-batch gradient descent. We printed the loss every 100 epochs to monitor the training progress. After training the model, we evaluated its performance on the testing set using four different evaluation metrics: accuracy, precision, recall, and F1 score. These metrics were calculated using scikit-learn's `accuracy_score()`, `precision_score()`, `recall_score()`, and `f1_score()` functions, respectively.
+
+# Results
+The trained model achieved an accuracy of 0.7792, a precision of 0.6818, a recall of 0.6571, and an F1 score of 0.6693 on the testing set. These results indicate that the model has a moderate predictive performance for diabetes in individuals.
+
+# Conclusion
+In this project, we developed a neural network model to predict diabetes in individuals using eight medical predictors. The model achieved moderate performance on the testing set, indicating that the predictors used in this study have some predictive value for diabetes. Further research could be conducted to explore the use of other predictors or models to improve the predictive performance.
