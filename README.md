@@ -90,4 +90,5 @@ The trained model achieved an accuracy of 0.7792, a precision of 0.6818, a recal
 # Conclusion
 In this project, we developed a neural network model to predict diabetes in individuals using eight medical predictors. The model achieved moderate performance on the testing set, indicating that the predictors used in this study have some predictive value for diabetes. Further research could be conducted to explore the use of other predictors or models to improve the predictive performance.
 
-
+# License
+This project is licensed under the [Salar Mokhtari Laleh Open-Source License](https://github.com/salarMokhtariL/Salar-Mokhtari-Laleh-License). See the LICENSE file for details
