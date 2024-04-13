@@ -1,3 +1,3 @@
 
 # Diabetes-Prediction
->By Salar Mokhtari Laleh & Mahdi Abdi 
+>By Salar Mokhtari Laleh & Mahdi Abdi Oskuie
